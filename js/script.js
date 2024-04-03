@@ -92,3 +92,13 @@ function fimJogo() {
     playGame = false
     iniciarJogo()
 }
+
+function iniciarJogo() {
+    const botaoIniciar = document.querySelector('iniciarJogada')
+    botaoIniciar.addEventListener('click', function(){
+        randomNumber = parseInt(Math.random()*100+1) 
+        numerosJogados = []
+        minhasJogadas = 1
+        jogadasAnteriores = ''
+    })
+}
