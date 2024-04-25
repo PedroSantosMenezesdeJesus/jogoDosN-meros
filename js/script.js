@@ -94,11 +94,17 @@ function fimJogo() {
 }
 
 function iniciarJogo() {
-    const botaoIniciar = document.querySelector('iniciarJogada')
+    const botaoIniciar = document.querySelector('#iniciarJogada')
     botaoIniciar.addEventListener('click', function(){
         randomNumber = parseInt(Math.random()*100+1) 
         numerosJogados = []
         minhasJogadas = 1
-        jogadasAnteriores = ''
+        jogadasAnteriores.innerHTML = ''
+        avisos.innerHTML = ''
+        jogadasRestantes.innerHTML = `${7 - minhasJogadas}`
+        jogada.removeAttribute('disabled', '')
+        submit.removeAttribute('disabled', '')
+        recomecar.removeChild(p)
+        playGame = true
     })
 }
